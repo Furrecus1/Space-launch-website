@@ -1,0 +1,49 @@
+body {
+     margin: 0px;
+     font-family: $font-open;
+}
+ body:before {
+     content: "";
+     display: block;
+     position: fixed;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     z-index: -10;
+     background: url(../../images/bg-img-sky.jpg) no-repeat center center;
+     background-size: cover;
+}
+ #wrapper {
+     margin: 60px auto 0px auto;
+     color: white;
+     max-width: 1200px;
+     background-color: $black-rgba;
+     padding:10px 10px 200px 10px; 
+
+     h2{
+        text-align: center;
+        background-image: url(../../images/space-header.jpg);
+        background-size: cover;
+        padding: 10px;
+        @include box-shadow(0px 5px 10px black);
+        margin: 10px 0 20px 0; 
+   }
+}
+
+ @media screen and (min-width: 1000px) {
+     #wrapper{
+         padding:10px 20px 200px 20px;
+     }
+}
+ @media screen and (min-width: 780px) {
+     #wrapper{
+         margin-top: 130px;
+         h2{
+            margin: 10px 0 20px 0;
+        }
+     }
+     
+     
+     
+}

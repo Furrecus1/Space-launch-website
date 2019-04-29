@@ -1,0 +1,22 @@
+@mixin box-shadow($property) {
+    -webkit-box-shadow: $property;
+    box-shadow: $property;
+  }
+  @mixin gradient($property, $property-2) {
+     -webkit-linear-gradient: $property,  $property-2;
+     -o-linear-gradient: $property, $property-2;
+    background: linear-gradient($property, $property-2);
+  }
+  @mixin hover-gradient($p1, $p2, $p3, $p4) {
+    -webkit-linear-gradient:$p1, $p2, $p3, $p4;
+    -o-linear-gradient:$p1, $p2, $p3, $p4;
+     background-image: linear-gradient($p1, $p2, $p3, $p4);
+ }
+ @mixin flex($property) {
+     -webkit-box: $property;
+     -ms-flexbox: $property;
+     display: $property;
+ }
+
+
+ 

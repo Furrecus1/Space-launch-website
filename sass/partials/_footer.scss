@@ -1,0 +1,71 @@
+footer {
+    
+     background-color: black;
+     color: white;
+     text-align: center;
+     background-image:url(../../images/footer-background-space.jpg);
+     background-size: cover;
+    background-position: center center;
+
+    #footer-menu{
+        padding: 15px 0px 0px 0px;
+        
+        ul {
+            margin: 0;
+            
+             margin-top: 0px;
+            padding: 0;
+             list-style: none;
+            text-align: center;
+        }
+        a {
+             color: white;
+             font-weight: bold;
+             padding: 6px;
+             text-decoration: none;
+             display: inline-block; 
+
+             &:hover {
+                color: $lightgreen-color;
+             }
+        }
+
+    }
+
+    #social-div{
+        a{
+            padding:20px 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+            
+        }
+    }
+
+    p{
+        padding: 10px;
+         margin: 0;
+         border-top: 1px solid white;
+    }
+}
+
+ 
+
+
+
+
+@media screen and (min-width: 800px) {
+    #footer-menu ul{
+        @include flex(flex);
+        margin-top: 15px;
+        border:none;
+    }
+    #flex-cont{
+        @include flex(flex);
+         justify-content: space-around;
+     }
+     
+   
+}
+ 
+ 

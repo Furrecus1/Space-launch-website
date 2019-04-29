@@ -1,0 +1,82 @@
+.rockets-container {
+     position: relative;
+     border-radius: 4px;   
+     .myRockets {
+        display: none;
+        img {
+           width: 100%;
+           margin-bottom: -5px;
+            border-radius: 4px;
+           max-height: 500px;
+           min-height: 300px;  
+        }   
+        .prev, .next {
+             margin-top: 20px;
+             cursor: pointer;
+             display: inline-block;
+             padding: 10px;
+             color: white;
+             font-weight: bold;
+             border-radius: $border-radius;
+             @include gradient($lightgreen-color, $darkgreen-color);
+             &:hover {
+                @include hover-gradient(30deg, $darkgreen-color 0, $lightgreen-color 35%, $darkgreen-color 90%);
+            }
+        }
+        .next {
+            @include gradient($lightgreen-color, $darkgreen-color);
+             float:right;
+             color: white;
+             
+        } 
+        .rocket-head {
+         color: white;
+         font-size: 16px;
+         position: absolute;
+         top: 0px;
+         right: 0;
+         left: 0;
+         margin: 10px;
+            h3 {
+               text-align: left;
+               padding: 6px 10px;
+               margin: 0;
+               background-image: url(../../images/space-header.jpg);
+               background-size: cover;
+               display: inline-block;
+            }
+        }
+        .rocket-number {
+            color: white;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0px;
+            right: 0;
+            margin: 10px;
+            color: white;
+            background-color: $black-rgba;
+            border-radius: 100%;
+            background-image: url(../../images/space-header.jpg);
+            background-size: cover;
+       }
+        .rocket-info {
+            padding: 10px;
+            background-color: $black-rgba;
+            border-radius: 4px;
+            margin-top: 20px;
+            h4{
+               margin: 0;
+          }
+       }
+}
+}
+
+ @media screen and (min-width: 780px) {
+     .rockets-container {
+         margin-bottom: 100px;
+    }
+  
+     
+}
+

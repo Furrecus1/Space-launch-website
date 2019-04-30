@@ -4,6 +4,11 @@
     color: white;
     float: right;
     cursor: pointer;
+
+    @include screen-3{
+        display: none;
+       
+    }
 }
 nav {
      font-weight: 600;
@@ -46,6 +51,10 @@ nav {
      display: none;
      background-color: black;
      @include box-shadow(0px 2px 10px black);
+
+     @include screen-3{
+            display: block;
+    }
      ul {
         @include flex(flex);
         -ms-flex-pack: distribute;
@@ -68,13 +77,4 @@ nav {
      width: 100%;
 }
 
- @media screen and (min-width: 780px) {
-     #hamburger-icon {
-         display: none;
-    }
-     #fullscreen-menu {
-         display: block;
-    }
-   
-     
-}
+

@@ -18,5 +18,46 @@
      display: $property;
  }
 
+ $screen-4: 1000px;
+
+ @mixin screen-4 {
+   @media (min-width: #{$screen-4}) {
+     @content;
+   }
+ }
+
+ $desktop-b: 840px;
+
+ @mixin desktop-b {
+   @media (min-width: #{$desktop-b}) {
+     @content;
+   }
+ }
+
+ $desktop: 800px;
+
+ @mixin desktop {
+   @media (min-width: #{$desktop}) {
+     @content;
+   }
+ }
+
+ $screen-3: 780px;
+
+ @mixin screen-3 {
+   @media (min-width: #{$screen-3}) {
+     @content;
+   }
+ }
+
+ $screen-2: 580px;
+
+ @mixin screen-2 {
+   @media (min-width: #{$screen-2}) {
+     @content;
+   }
+ }
+
+
 
  

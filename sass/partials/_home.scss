@@ -3,17 +3,30 @@
      height: 590px;
      
      position: relative;
+
+    @include screen-3{
+        height: 670px;
+        margin-top: 130px;
+    }
+    @include screen-4{
+        height: 740px;
+    }
+
      #next-launch-container {
         background-color: $black-rgba;
         position: absolute;
         top: 20px;
-        left: 20px;
-        right: 20px;
+        left: 10px;
+        right: 10px;
         text-align: center;
         border-radius: 4px;
         max-width: 400px;
         margin: 0 auto;
         color: white;
+
+        @include screen-3{
+            top:20px;
+        }
         h2 {
             background-image: url(../../images/space-header.jpg);
             background-size: cover;
@@ -49,10 +62,14 @@
     text-align: center;
     position: absolute;
     top: 225px;
-    left: 20px;
-    right: 20px;
+    left: 10px;
+    right: 10px;
     max-width: 700px;
     margin: 0 auto;
+
+    @include screen-3{
+        top:225px;
+    }
     p {
         font-size: 22px;
         font-weight: 800;
@@ -61,6 +78,10 @@
         color: white;
         border-radius: 4px;
         background-color: $black-rgba;
+
+        @include screen-3{
+           font-size: 36px;
+        }
    }
    a {
     font-weight: 600;
@@ -82,25 +103,4 @@
 }
 }
  
- @media screen and (min-width: 1000px) {
-    
-     #home-container {
-         height: 740px!important;
-    }
-}
- @media screen and (min-width: 780px) {
 
-     #home-container {
-         height: 670px;
-         margin-top: 130px;
-         #next-launch-container {
-            top: 20px;
-       }
-        #call-to-action {
-            top: 225px;
-            p {
-                font-size: 36px;
-           }
-       }  
-    }    
-}

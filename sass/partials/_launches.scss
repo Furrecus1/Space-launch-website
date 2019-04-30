@@ -6,6 +6,12 @@
      @include box-shadow(0px 2px 10px black);
      text-align: center;
      padding-top: 10px;
+
+     @include desktop-b{
+        height: 570px;
+        margin-bottom: 20px;
+     }
+
      h3 {
         background-image: url(../../images/space-header.jpg);
         background-size: cover;
@@ -16,7 +22,12 @@
         font-size: 22px;
         @include box-shadow(0px 2px 10px black);
         max-width: 400px;
+
+        @include desktop-b{
+           
+         }
      }
+ 
 }
 
  #latest-launch {
@@ -87,23 +98,33 @@
         background-image: url(../../images/space-header.jpg);
         background-size: cover;
    }
-   #upcoming-launch-div {
-    margin: 10px 0;
-    color: white;
-    @include box-shadow(0px 5px 10px black);
-    text-align: center;
-    background-color: $black-rgba;
-    font-weight: 600;
-    #time {
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(32, 218, 32);
-   }
-   p {
-        margin: 0px;
-        padding: 2px;
-   }
-   }
+
+    #upcoming-launches {
+        @include desktop-b {
+            margin: 20px auto;
+        }
+       
+    
+        #upcoming-launch-div {
+         margin: 10px 0;
+         color: white;
+         @include box-shadow(0px 5px 10px black);
+         text-align: center;
+         background-color: $black-rgba;
+         font-weight: 600;
+
+         
+         #time {
+             font-size: 20px;
+             font-weight: bold;
+             color: rgb(32, 218, 32);
+        }
+        p {
+             margin: 0px;
+             padding: 2px;
+        }
+        }
+    }
 }
 
 #previous-container{
@@ -112,9 +133,16 @@
         background-image: url(../../images/space-header.jpg);
         background-size: cover;
         color: white;
-        height: 150px;
+        height: 180px;
         margin-bottom: 10px;
         @include box-shadow(0px 5px 10px black);
+        @include screen-2 {
+            height: 150px;
+        }
+        @include desktop-b {
+            margin-bottom: 10px;
+        }
+
         h3 {
             font-size: 24px;
             margin: 0px;
@@ -134,40 +162,55 @@
             display: inline-block;
        }
    }
-   .pre-launch-div {
-    margin: 20px 10px;
-    padding: 10px;
-    text-align: center;
-    background-color: white;
-    background: rgba(255, 255, 255, 0.6);
-    @include box-shadow(0px 5px 10px black);
-    color: black;
-    img {
-       width: 160px;
-  }
-  h4 {
-       font-size: 24px;
-       margin: 0;
-       height: 70px;
-  }
-  p {
-       margin: 8px;
-  }
-  a {
-       display: inline-block;
-       padding: 8px 10px;
-       margin: 10px;
-       border-radius: $border-radius;
-       background: $black-rgba;
-       margin-bottom: 10px;
-       color: white;
-       text-decoration: none;
-       border: 2px solid white;
-       &:hover {
-           @include hover-gradient(30deg, $darkgreen-color 0, $lightgreen-color 35%, $darkgreen-color 90%);
-           @include box-shadow(none);
-           color: white;
-      }
+
+   #previous-launch {
+
+        @include screen-4{
+            grid-template-columns:1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .pre-launch-div {
+         margin: 20px 10px;
+         padding: 10px;
+         text-align: center;
+         background-color: white;
+         background: rgba(255, 255, 255, 0.6);
+         @include box-shadow(0px 5px 10px black);
+         color: black;
+        
+         @include screen-2{
+             margin: 0;
+         }
+     
+         img {
+            width: 160px;
+         }
+         h4 {
+            font-size: 24px;
+            margin: 0;
+            height: 70px;
+         }
+         p {
+            margin: 8px;
+         }
+         a {
+            display: inline-block;
+            padding: 8px 10px;
+            margin: 10px;
+            border-radius: $border-radius;
+            background: $black-rgba;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            &:hover {
+                @include hover-gradient(30deg, $darkgreen-color 0, $lightgreen-color 35%, $darkgreen-color 90%);
+                @include box-shadow(none);
+                color: white;
+           }
+       
+         }
   }
    a:first-of-type {
        color: white;
@@ -182,46 +225,25 @@
 }
 }
 
- 
-@media screen and (min-width: 580px) {
-    .pre-launch-div{
-        margin: 0px!important;
-    }
-    #previous-launch {
-       display: grid;
-       grid-template-columns: 1fr 1fr;
-       grid-gap: 10px;
-       align-content: center;
-      
-   }
-   
+#previous-launch {
 
-}
-   
- @media screen and (min-width: 840px) {
-     
-     #latest-container {
-         height: 570px;
-         margin-bottom: 20px;
-         h4 {
-            font-size: 38px;
-       }
-    }
-     #upcoming-launches{
-        margin: 20px auto;
-     }
-    
-     #pre-launch-head{
-         margin-bottom: 10px;
-     }
-     #previous-launch {
-        grid-template-columns:1fr 1fr 1fr;
+    @include screen-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 10px;
-        
+        align-content: center;
     }
-     
-     
+
+    @include screen-4 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        align-content: center;
+    }
+    
+   
 }
+
  
     
      
